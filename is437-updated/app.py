@@ -41,10 +41,6 @@ def set():
     session['key'] = 'value'
     return 'ok'
 
-
-HEY JEFF
-
-
 #test getting a session:
 @app.route('/get')
 def get():
@@ -183,11 +179,11 @@ def sign_up():
     o.createBlank()
     return render_template('users/sign-up.html',obj = o)
    
-@app.route('/getDonation',methods=['GET','POST'])
-def enterdonation():
-    o = donation()
-    action = request.args.get('action')
-    pkval = request.args.get('pkval')
+# @app.route('/getDonation',methods=['GET','POST'])
+# def enterdonation():
+#     o = donation()
+#     action = request.args.get('action')
+#     pkval = request.args.get('pkval')
 
 
 #display form   
