@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+            <div class="error_text" >
+                {% if obj.errors|length > 0 %}
+                    {% for error in obj.errors  %}
+                        <div>{{ error }}</div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <div>
+                <form action="/charities/manage?pkval={{ obj.data[0].id }}&action=update" method="POST">
+                    Name:<br>
+                    <input type="text" name="name" value="{{ obj.data[0].name }}" />
+                    <br>
+
+                    
+                    <br>
+                    <br>
+                    <input type="submit" value="Submit" />
+                </form>
+                
+            </div>
+            <div>
+                <br><br>
+                <a href="/charities/manage?pkval={{ obj.data[0].id }}&action=delete">Delete</a>
+            </div>
+{% endblock %}

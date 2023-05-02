@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+   <div>
+	<h1>Main Menu-Admin</h1>
+      	<div id="menumsg">
+			Hello, {{ me.name }}  ({{ me.email }})
+	  	</div>
+		<br><br>
+
+		<div id = "test"> Number of current registered users in the database:  
+		{% for obj in objs.results %}
+			{{obj.count}}
+			{% endfor %}
+		</div>
+		
+		<a href="/users/manage">Manage Users</a><br>
+		<a href="/charities/manage">Manage charities</a><br>
+		<a href="/logout">Logout</a><br>
+
+	</div> 
+{% endblock %}

@@ -1,0 +1,15 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Home</title>
+      {% else %}
+      <title>Welcome to my example</title>
+      {% endif %}
+	  <link rel="stylesheet" type="text/css" href="static/style.css">
+      <link rel="stylesheet" href="https://cdn.simplecss.org/simple-v1.css">
+    </head>
+    <body>
+       
+        {% block content %}{% endblock %}
+    </body>
+</html>

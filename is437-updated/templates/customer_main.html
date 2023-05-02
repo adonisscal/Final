@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Main menu-donor</h1>
+      <div id="menumsg">
+		Hello, {{ me.name }}  ({{ me.email }})
+	  </div>
+	<br><br>
+	<a href="#">View Users</a><br>
+	<a href="donate">Make a Donation</a><br>
+	<input type="text" name="textbox_name" placeholder="Enter text here">
+
+    <a href="/logout">Logout</a><br>
+	
+    
+{% endblock %}
